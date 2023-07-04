@@ -7,11 +7,11 @@ In this exercise, you’ll build a simulation of a classic kid’s toy, the [Ma
 
 This should appear as a black ball that initially reads “Think of a Question”, like this:
 
-![Untitled](https://lessons.springboard.com/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe6a433ca-7814-4754-b3f3-cf9a680f1d27%2FUntitled.png?id=11479c5f-05b6-47f0-99df-1bea8cce0298&table=block&spaceId=163f1722-85e9-4a3c-adba-457a91094f00&width=2000&userId=&cache=v2)
+![Untitled](https://lessons.springboard.com/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe6a433ca-7814-4754-b3f3-cf9a680f1d27%2FUntitled.png?id=11479c5f-05b6-47f0-99df-1bea8cce0298&table=block&spaceId=163f1722-85e9-4a3c-adba-457a91094f00&width=380&userId=&cache=v2)
 
 When you click on the ball, it should choose a random answer & the matching color for that answer. For example, after clicking, it might look like this:
 
-(https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2b99b7ae-948a-4322-8cdc-4b893ea13ff5/Untitled.png)
+(https://lessons.springboard.com/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2b99b7ae-948a-4322-8cdc-4b893ea13ff5%2FUntitled.png?id=6b74db6b-7478-424b-bb61-a845b629e1df&table=block&spaceId=163f1722-85e9-4a3c-adba-457a91094f00&width=380&userId=&cache=v2)
 
 ## **Step One: *EightBall* Component**
 
