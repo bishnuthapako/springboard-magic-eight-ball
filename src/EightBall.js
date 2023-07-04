@@ -33,31 +33,22 @@ function EightBall() {
 
  const [answer, setAnswer] = useState("Think of a Question");
  const [colors, setColors] = useState("black");
- const [random, setRandom] = useState();
  const [count, setCount] = useState(0);
 
-
-
- console.log(colors, 'color');
- console.log(answer, 'ans');
- console.log(count, 'count')
-
  const handleClick =()=>{
-  setRandom(randomAns())
-  setColors(random.color);
-  setAnswer(random.msg);
+  const randomAnswer = randomAns();
+  setAnswer(randomAnswer.msg);
+  setColors(randomAnswer.color);
   setCount(count + 1)
  }
 
  const handleNewGame = ()=>{
-   setAnswer("Think of a Question")
+   setAnswer("Think of a Question");
    setColors("black");
    setCount(0)
-   setRandom(randomAns())
  }
 
   return (
-
    <>
    <div className="col">
     <div className="col d-flex justify-content-center align-items-center">
@@ -67,16 +58,14 @@ function EightBall() {
         <p className='text-light'>{answer}</p>
         </div>
       }
-   
     </div>
     <br/>
+    <p className='text-center'>Count #{count}</p>
     {count >= 20 && <div className="col d-flex justify-content-center">
       <button onClick={handleNewGame} type='button' className='btn btn-warning btn-lg'>New Game</button>
     </div>}
    </div>
    </>
-   
-
   )
 }
 

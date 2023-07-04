@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Getting Started with springboard Eight Ball project
+# ****Eight Ball****
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*(There is no starter code for this exercise)*
 
-## Available Scripts
+In this exercise, you’ll build a simulation of a classic kid’s toy, the [Magic Eight Ball](https://en.wikipedia.org/wiki/Magic_8-Ball).
 
-In the project directory, you can run:
+This should appear as a black ball that initially reads “Think of a Question”, like this:
 
-### `npm start`
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e6a433ca-7814-4754-b3f3-cf9a680f1d27/Untitled.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+When you click on the ball, it should choose a random answer & the matching color for that answer. For example, after clicking, it might look like this:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2b99b7ae-948a-4322-8cdc-4b893ea13ff5/Untitled.png)
 
-### `npm test`
+## **Step One: *EightBall* Component**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This application will consist of two components:
 
-### `npm run build`
+***App***
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A simple component that just renders an *EightBall* component.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+***EightBall***
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The component for the magic eight ball.
 
-### `npm run eject`
+The *EightBall* should take a single property, *answers*, which should be an array of objects, with each object having a key for *msg* and *color*. For example, to use the answers from the classic commercial product, you could use these:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```jsx
+[
+  { msg: "It is certain.", color: "green" },
+  { msg: "It is decidedly so.", color: "green" },
+  { msg: "Without a doubt.", color: "green" },
+  { msg: "Yes - definitely.", color: "green" },
+  { msg: "You may rely on it.", color: "green" },
+  { msg: "As I see it, yes.", color: "green" },
+  { msg: "Most likely.", color: "green" },
+  { msg: "Outlook good.", color: "green" },
+  { msg: "Yes.", color: "green" },
+  { msg: "Signs point to yes.", color: "goldenrod" },
+  { msg: "Reply hazy, try again.", color: "goldenrod" },
+  { msg: "Ask again later.", color: "goldenrod" },
+  { msg: "Better not tell you now.", color: "goldenrod" },
+  { msg: "Cannot predict now.", color: "goldenrod" },
+  { msg: "Concentrate and ask again.", color: "goldenrod" },
+  { msg: "Don't count on it.", color: "red" },
+  { msg: "My reply is no.", color: "red" },
+  { msg: "My sources say no.", color: "red" },
+  { msg: "Outlook not so good.", color: "red" },
+  { msg: "Very doubtful.", color: "red" },
+]
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The *EightBall* will need state to keep track of the current color and message text, and this state should initially be “black” and “Think of a Question”.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Make it so that the ball chooses a random message when it is clicked on. This should change the background color of the ball and the message.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## **Further Study 1**
 
-## Learn More
+If you have more time, here are some things to try out:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **Reset**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Add a button below the ball that will reset the ball back to its initial state.
 
-### Code Splitting
+### **Record Keeping**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+As you ask questions to the ball, display counts of the number of times the eight ball shows up as each of the three different colors.
 
-### Analyzing the Bundle Size
+## **Further Study 2: Color Boxes**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+For this part, you should show a series of 16 boxes (a box is just square div with a background color). At the bottom of all of the boxes should be a button labeled “Change”.
 
-### Making a Progressive Web App
+Initially, each box should have a background color chosen from a random list of colors.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+When you click the button:
 
-### Advanced Configuration
+- it should select a random box
+- it should change the background color of that random box to a new color from the possible colors list.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Before building anything, *think about the structure of your React app.* This entire thing shouldn’t be one giant component.
 
-### Deployment
+## **Further Study 3**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### **Default Properties**
 
-### `npm run build` fails to minify
+For both parts, there are opportunities to move some things into default properties:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- the list of possible colors for boxes
+- the number of boxes (so it doesn’t always have to be 16!)
+
+### **Feedback on Changed Box**
+
+For the color boxes app, it can be tricky to tell which box changed when you clicked (particularly when it picks the same random color, so you can’t see any difference!)
+
+Change the application so that, when a box just changed, it shows “changed!” inside of the div. That text should go away after the next click.
+
+[Solution](https://lessons.springboard.com/Solution-ec022be528f84188aafbc33a860482c6?pvs=21)
