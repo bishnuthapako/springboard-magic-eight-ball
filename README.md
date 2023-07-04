@@ -11,7 +11,7 @@ This should appear as a black ball that initially reads “Think of a Question�
 
 When you click on the ball, it should choose a random answer & the matching color for that answer. For example, after clicking, it might look like this:
 
-(https://lessons.springboard.com/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2b99b7ae-948a-4322-8cdc-4b893ea13ff5%2FUntitled.png?id=6b74db6b-7478-424b-bb61-a845b629e1df&table=block&spaceId=163f1722-85e9-4a3c-adba-457a91094f00&width=380&userId=&cache=v2)
+(https://file.notion.so/f/s/2b99b7ae-948a-4322-8cdc-4b893ea13ff5/Untitled.png?id=6b74db6b-7478-424b-bb61-a845b629e1df&table=block&spaceId=163f1722-85e9-4a3c-adba-457a91094f00&expirationTimestamp=1688594400000&signature=E9WjG5xbDYjiHclNOHlZmDga994TkgshMBrYXjDlaFA&downloadName=Untitled.png)
 
 ## **Step One: *EightBall* Component**
 
